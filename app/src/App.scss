@@ -1,0 +1,16 @@
+@import '../stylesheets/_main.scss';
+
+.App {
+
+	&__Wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__ContentWrapper {
+
+		&.animate {
+			@include animate(fadeIn, 1s, 0.5s);
+		}
+	}
+}
