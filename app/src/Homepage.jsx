@@ -6,6 +6,7 @@ import Header from './Header';
 import MainImage from './MainImage';
 import Summary from './Summary';
 import Events from './Events';
+import Party from './Party';
 
 class Homepage extends Component {
 
@@ -17,6 +18,7 @@ class Homepage extends Component {
         <MainImage />
         <Summary />
         <Events />
+        <Party />
       </div>
     )
   }

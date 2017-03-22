@@ -1,0 +1,38 @@
+@import '../stylesheets/_main.scss';
+
+.Party-list {
+
+  & > ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media(min-width: $bp-medium) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+  }
+}
+
+.Party-listDetails {
+  flex-basis: 55%;
+  margin: 0 50px 40px;
+}
+
+.Party-listImageWrapper {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.Party-listImage {
+  height: 100%;
+}
