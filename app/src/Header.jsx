@@ -6,7 +6,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="Header-wrapper">
+      <div className='Header-wrapper'>
         <li className='Header-list'>
           <ul>HOME</ul>
           <ul>EVENTS</ul>

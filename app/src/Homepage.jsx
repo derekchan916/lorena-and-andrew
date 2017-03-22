@@ -3,6 +3,7 @@ import './Homepage.scss';
 import React, { Component } from 'react';
 
 import Header from './Header';
+import MainImage from './MainImage';
 
 class Homepage extends Component {
 
@@ -11,6 +12,7 @@ class Homepage extends Component {
     return (
       <div className="Homepage">
         <Header />
+        <MainImage />
       </div>
     )
   }
