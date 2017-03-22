@@ -1,0 +1,21 @@
+@import '../stylesheets/_main.scss';
+
+.Header-wrapper {
+  display: none;
+
+  @media(min-width: $bp-medium) {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}
+
+.Header-list {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0 auto;
+  padding: 20px 40px;
+  max-width: 800px;
+}
