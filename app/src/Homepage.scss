@@ -1,0 +1,9 @@
+@import '../stylesheets/_main.scss';
+
+.App {
+
+  &__Wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}

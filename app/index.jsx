@@ -1,22 +1,19 @@
-'use strict';
-
 import './stylesheets/_styleguide.scss';
-import React, {
-	Component
-} from 'react';
+
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './src/App';
+import Homepage from './src/Homepage';
 
 class Index extends Component {
 
-	render () {
-		return (
-			<div className="Styleguide">
-        <App />
-			</div>
-		)
-	}
+  render () {
+    return (
+      <div className="Styleguide">
+        <Homepage />
+      </div>
+    )
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
