@@ -1,0 +1,44 @@
+@import '../stylesheets/_main.scss';
+
+.Events-wrapper {
+
+  @media(min-width: $bp-medium) {
+    padding: $content-top-padding $content-side-padding*2 $content-top-padding $content-side-padding;
+  }
+}
+
+.Events-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media(min-width: $bp-medium) {
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.Events-mapWrapper {
+  border: 1px solid #CCC;
+  width: 300px;
+  height: 400px;
+
+  @media(min-width: $bp-medium-high) {
+    width: 400px;
+  }
+}
+
+.Events-detailList {
+
+  & > ul {
+    margin-bottom: 40px;
+  }
+}
+
+.Events-subDetails {
+
+  & > span {
+    display: block;
+  }
+}

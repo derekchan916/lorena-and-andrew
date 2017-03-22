@@ -1,19 +1,5 @@
 @import '../stylesheets/_main.scss';
 
-.Summary-wrapper {
-  padding: $content-top-padding $content-side-padding;
-  border-bottom: 1px solid #CCC;
-
-  @media(min-width: $bp-medium) {
-    padding: $content-top-padding $content-side-padding*2;
-  }
-}
-
-.Summary-title {
-  text-align: center;
-  font-size: 38px
-}
-
 .Summary-block {
 
   & > span {

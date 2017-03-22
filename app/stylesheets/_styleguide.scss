@@ -8,11 +8,25 @@
 	h1 {
 		font-size: $font-size-h1;
     margin-bottom: 40px;
+    text-align: center;
 	}
 
 	h2 {
 		font-size: $font-size-h2;
-		font-weight: bold;
 		margin-bottom: $gutter;
 	}
+
+  .content-wrapper {
+    padding: $content-top-padding $content-side-padding;
+    border-bottom: 1px solid #CCC;
+
+    @media(min-width: $bp-medium) {
+      padding: $content-top-padding $content-side-padding*2;
+    }
+  }
+
+  .content-container {
+    margin: 0 auto;
+    max-width: $content-max-width;
+  }
 }
