@@ -1,7 +1,7 @@
 
 // Font sizes
 $font-size-main: 14px;
-$font-size-h1: 22px;
+$font-size-h1: 38px;
 $font-size-h2: 20px;
 $font-size-h3: 16px;
 $font-size-h4: 14px;
@@ -21,3 +21,7 @@ $bp-small: 320px !default;
 $bp-medium: 680px !default;
 $bp-medium-high: 960px !default;
 $bp-large: 1200px !default;
+
+$content-max-width: 800px;
+$content-side-padding: 40px;
+$content-top-padding: 80px;
