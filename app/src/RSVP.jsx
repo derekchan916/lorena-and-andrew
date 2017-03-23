@@ -3,16 +3,15 @@ import './RSVP.scss';
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-import { FIREBASE_CONFIG } from '../constants';
+import { FIREBASE_CONFIG, GUEST_SCHEMA } from '../constants';
 
 class RSVP extends Component {
 
   constructor() {
     super();
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
+      guest: GUEST_SCHEMA,
+      errors: [],
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,13 +19,15 @@ class RSVP extends Component {
   }
 
   componentDidMount() {
+    // Get the list of guests
     Axios.get(FIREBASE_CONFIG.guestURL)
       .then(response => {
-        console.log(response.data);
+        this.guestList = parseData(response.data);
       });
   }
 
   render() {
+    console.log(this.state.errors);
     return (
       <div className="content-wrapper">
         <div className="content-container">
@@ -36,7 +37,7 @@ class RSVP extends Component {
               <input
                 type="text"
                 name='firstName'
-                value={ this.state.firstName }
+                value={ this.state.guest.firstName }
                 onChange={ this.handleChange }
                 placeholder='First Name' />
             </label>
@@ -44,7 +45,7 @@ class RSVP extends Component {
               <input
                 type="text"
                 name="lastName"
-                value={ this.state.lastName }
+                value={ this.state.guest.lastName }
                 onChange={ this.handleChange }
                 placeholder='Last Name' />
             </label>
@@ -52,7 +53,7 @@ class RSVP extends Component {
               <input
                 type="text"
                 name="email"
-                value={ this.state.email }
+                value={ this.state.guest.email }
                 onChange={ this.handleChange }
                 placeholder='Email' />
             </label>
@@ -62,6 +63,11 @@ class RSVP extends Component {
               Submit
             </button>
           </div>
+          { this.state.errors.map((error, i) => {
+            return(
+              <span key={ i }>{ error }</span>
+            )
+          })}
         </div>
       </div>
     )
@@ -70,23 +76,79 @@ class RSVP extends Component {
   handleChange(e) {
     e.preventDefault();
     const name = e.target.name;
+    const update = this.state.guest;
 
-    this.setState({ [name]: e.target.value });
+    update[name] = e.target.value;
+    this.setState({ guest: update });
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    const errors = [];
+    const lowercasedData = toLowerCase(this.state.guest);
 
-    Axios.post(FIREBASE_CONFIG.guestURL, this.state )
+    if (this.validateData(this.guestList, this.state.guest, errors)) {
+      Axios.post(FIREBASE_CONFIG.guestURL, this.state.guest)
       .then( _ => {
         console.log('SUCCESS');
+        this.setState(GUEST_SCHEMA);
       });
+    } else {
+      console.warn('DUPLICATES');
+    }
+
     this.setState({
-      firstName: '',
-      lastName: '',
-      email: '',
+      errors: errors,
     });
   }
+
+  validateData(guestList, guest, errors) {
+    const noDupes = this.validateDupes(guestList, guest, errors);
+    const noEmptyInputs = this.validateEmptyInputs(guest, errors);
+
+    return noDupes && noEmptyInputs;
+  }
+
+  validateDupes(guestList, guest, errors) {
+    const isValid = !guestList.some((RSVPedGuest) => {
+      return RSVPedGuest.firstName === guest.firstName
+      && guest.lastName === guest.lastName
+    });
+
+    if (isValid) {
+      return true;
+    } else {
+      this.setState({
+        errors: errors.concat(["You have already been added!"])
+      });
+    }
+  }
+
+  validateEmptyInputs(guest, errors) {
+    const isValid = !Object.values(guest).some(input => input === "");
+
+    if (isValid) {
+      return true;
+    } else {
+      this.setState({
+        errors: errors.concat(["You missed something!"])
+      })
+    }
+  }
+
+  clearErrors() {
+    this.setState({
+      errors: []
+    });
+  }
+}
+
+function parseData(data) {
+  return Object.values(data);
+}
+
+function toLowerCase(data) {
+  window.guest = data;
 }
 
 export default RSVP;

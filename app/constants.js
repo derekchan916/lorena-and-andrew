@@ -7,6 +7,12 @@ const FIREBASE_CONFIG = {
   messagingSenderId: "557917043230"
 };
 
+const GUEST_SCHEMA = {
+  firstName: '',
+  lastName: '',
+  email: '',
+}
+
 const HEADER_LINKS = [ 'HOME', 'EVENTS', 'WEDDING PARTY', 'TRAVEL', 'RSVP' ];
 
 const PARTY_PEOPLE = [
@@ -24,6 +30,7 @@ const PARTY_PEOPLE = [
 
 export {
   FIREBASE_CONFIG,
+  GUEST_SCHEMA,
   HEADER_LINKS,
   PARTY_PEOPLE
 }
