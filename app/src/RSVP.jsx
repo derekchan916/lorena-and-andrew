@@ -1,7 +1,6 @@
 import './RSVP.scss';
 
 import React, { Component } from 'react';
-import Firebase from 'firebase';
 import Axios from 'axios';
 
 import { FIREBASE_CONFIG } from '../constants';
@@ -21,7 +20,6 @@ class RSVP extends Component {
   }
 
   componentDidMount() {
-    Firebase.initializeApp(FIREBASE_CONFIG);
     Axios.get(FIREBASE_CONFIG.guestURL)
       .then(response => {
         console.log(response.data);
