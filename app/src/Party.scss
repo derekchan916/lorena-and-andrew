@@ -1,23 +1,21 @@
 @import '../stylesheets/_main.scss';
 
-.Party-list {
+.Party-listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 40px;
 
-  & > ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-
-    @media(min-width: $bp-medium) {
-      align-items: flex-start;
-      flex-direction: row;
-    }
+  @media(min-width: $bp-medium) {
+    align-items: flex-start;
+    flex-direction: row;
   }
 }
 
 .Party-listDetails {
   flex-basis: 55%;
-  margin: 0 50px 40px;
+  margin: 0 70px 40px;
 }
 
 .Party-listImageWrapper {

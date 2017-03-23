@@ -2,6 +2,8 @@ import './Party.scss';
 
 import React, { Component } from 'react';
 
+import { PARTY_PEOPLE } from '../constants';
+
 class Party extends Component {
 
   render() {
@@ -17,18 +19,22 @@ class Party extends Component {
 
   renderPartyList() {
     return (
-      <li className="Party-list">
-        <ul>
-          <div className="Party-listDetails">
-            <h2>DEREK CHAN</h2>
-            <span>Megan and I met during summer school after our freshman year at UCLA — we hit it off and wound up rooming together during junior and senior year. After graduation, we packed up our apartment for San Francisco. We had both gotten our first (grown-up!) jobs in the city and found an apartment together in the Inner Richmond. Our Monday night tradition was pretty much my most favorite thing, ever: pizza from Giorgio’s and the newest episode of The Bachelor.</span>
-          </div>
-          <div className="Party-listImageWrapper">
-            <img
-              src="app/images/lorena-andrew-1.jpg"
-              className="Party-listImage "/>
-          </div>
-        </ul>
+      <li>
+        { PARTY_PEOPLE.map((person, i) => {
+          return (
+            <ul className="Party-listItem">
+              <div className="Party-listDetails">
+                <h2>{ person.name }</h2>
+                <span>{ person.description }</span>
+              </div>
+              <div className="Party-listImageWrapper">
+                <img
+                  src={ person.image }
+                  className="Party-listImage "/>
+              </div>
+            </ul>
+          )
+        })}
       </li>
     )
   }
