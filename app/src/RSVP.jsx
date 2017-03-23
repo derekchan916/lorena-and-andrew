@@ -2,6 +2,7 @@ import './RSVP.scss';
 
 import React, { Component } from 'react';
 import Firebase from 'firebase';
+import Axios from 'axios';
 
 import { FIREBASE_CONFIG } from '../constants';
 
@@ -21,6 +22,10 @@ class RSVP extends Component {
 
   componentDidMount() {
     Firebase.initializeApp(FIREBASE_CONFIG);
+    Axios.get(FIREBASE_CONFIG.guestURL)
+      .then(response => {
+        console.log(response.data);
+      });
   }
 
   render() {
@@ -74,16 +79,15 @@ class RSVP extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    try {
-      Firebase.database().ref('guests').push(this.state);
-      this.setState({
-        firstName: '',
-        lastName: '',
-        email: '',
+    Axios.post(FIREBASE_CONFIG.guestURL, this.state )
+      .then( _ => {
+        console.log('SUCCESS');
       });
-    } catch(e) {
-      console.warn(e);
-    }
+    this.setState({
+      firstName: '',
+      lastName: '',
+      email: '',
+    });
   }
 }
 
