@@ -1,3 +1,5 @@
+const HEADER_LINKS = [ 'HOME', 'EVENTS', 'WEDDING PARTY', 'TRAVEL', 'RSVP' ];
+
 const PARTY_PEOPLE = [
   {
     name: 'Derek',
@@ -9,8 +11,9 @@ const PARTY_PEOPLE = [
     description: 'I am the big douches girlfriend',
     image: 'app/images/alice-1.jpg'
   }
-]
+];
 
 export {
+  HEADER_LINKS,
   PARTY_PEOPLE
 }

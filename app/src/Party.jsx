@@ -22,7 +22,7 @@ class Party extends Component {
       <li>
         { PARTY_PEOPLE.map((person, i) => {
           return (
-            <ul className="Party-listItem">
+            <ul className="Party-listItem" key={ i }>
               <div className="Party-listDetails">
                 <h2>{ person.name }</h2>
                 <span>{ person.description }</span>
