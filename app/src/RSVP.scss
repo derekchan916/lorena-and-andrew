@@ -1,0 +1,47 @@
+@import '../stylesheets/_main.scss';
+
+.RSVP-inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media(min-width: $bp-medium) {
+    flex-direction: row;
+  }
+}
+
+.RSVP-inputWrapper {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+
+  &:hover {
+    cursor: text;
+  }
+}
+
+.RSVP-inputWrapper--firstName,
+.RSVP-inputWrapper--lastName {
+  flex-grow: 1;
+  flex-basis: 45%;
+}
+
+.RSVP-inputWrapper--email {
+  flex-grow: 1;
+  flex-basis: 100%;
+}
+
+.RSVP-button {
+  flex-grow: 1;
+  align-self: center;
+  text-align: center;
+
+  background-color: black;
+  border-color: white;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
