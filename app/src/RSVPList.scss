@@ -1,0 +1,15 @@
+@import '../stylesheets/_main.scss';
+
+.RSVPList-button {
+  flex-grow: 1;
+  align-self: center;
+  text-align: center;
+
+  background-color: black;
+  border-color: white;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

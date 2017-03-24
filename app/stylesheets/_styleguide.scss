@@ -16,6 +16,11 @@
 		margin-bottom: $gutter;
 	}
 
+  h4 {
+    font-size: $font-size-h4;
+    margin-bottom: $gutter-small;
+  }
+
   .content-wrapper {
     padding: $content-top-padding $content-side-padding;
     border-bottom: 1px solid #CCC;

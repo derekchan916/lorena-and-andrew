@@ -7,56 +7,42 @@ import { FIREBASE_CONFIG, GUEST_SCHEMA } from '../constants';
 
 class RSVP extends Component {
 
-  constructor() {
-    super();
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
   render() {
     const {
-      firstName,
-      lastName,
-      email,
+      index,
+      guest,
+      handleChange,
     } = this.props;
 
     return (
       <div className="RSVP-inputContainer">
+        <h4 className="RSVP-title">{`Guest ${index + 1}`}</h4>
         <label className="RSVP-inputWrapper RSVP-inputWrapper--firstName">
           <input
             type="text"
             name='firstName'
-            value={ firstName }
-            onChange={ this.handleChange }
+            value={ guest.firstName }
+            onChange={ (e) => handleChange(index, e) }
             placeholder='First Name' />
         </label>
         <label className="RSVP-inputWrapper RSVP-inputWrapper--lastName">
           <input
             type="text"
             name="lastName"
-            value={ lastName }
-            onChange={ this.handleChange }
+            value={ guest.lastName }
+            onChange={ (e) => handleChange(index, e) }
             placeholder='Last Name' />
         </label>
         <label className="RSVP-inputWrapper RSVP-inputWrapper--email">
           <input
             type="text"
             name="email"
-            value={ email }
-            onChange={ this.handleChange }
+            value={ guest.email }
+            onChange={ (e) => handleChange(index, e) }
             placeholder='Email' />
         </label>
       </div>
     )
-  }
-
-  handleChange(e) {
-    e.preventDefault();
-    const name = e.target.name;
-    const update = this.state.guest;
-
-    update[name] = e.target.value;
-    this.setState({ guest: update });
   }
 }
 

@@ -12,23 +12,17 @@ class RSVPList extends Component {
   constructor() {
     super();
     this.state = {
-      guests: [GUEST_SCHEMA],
-      errors: [],
+      guests: [GUEST_SCHEMA, GUEST_SCHEMA],
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount() {
-    // Get the list of guests
-    Axios.get(FIREBASE_CONFIG.guestURL)
-      .then(response => {
-        this.guestList = parseData(response.data);
-      });
-  }
-
   render() {
+    const { guests } = this.state;
+    const isDataValid = this.validateData(guests);
+
     return (
       <div className="content-wrapper">
         <div className="content-container">
@@ -37,16 +31,13 @@ class RSVPList extends Component {
             return (
               <RSVP
                 key={ i }
-                guest={ guest } />
-            )
-          }) }
-          { this.state.errors.map((error, i) => {
-            return(
-              <span key={ i }>{ error }</span>
+                index={ i }
+                guest={ guest }
+                handleChange={ this.handleChange }/>
             )
           }) }
           <button
-            className="RSVP-inputWrapper RSVP-button"
+            className="RSVP-inputWrapper RSVPList-button"
             onClick={ this.handleSubmit }>
             Submit
           </button>
@@ -55,59 +46,53 @@ class RSVPList extends Component {
     )
   }
 
-  handleChange(e) {
+  handleChange(guestIndex, e) {
     e.preventDefault();
+    const { guests } = this.state;
     const name = e.target.name;
-    const update = this.state.guest;
+    let guestsClone = guests.slice(0);
+    window.guestsClone = guestsClone;
+    guestsClone[guestIndex][name] = e.target.value;
 
-    update[name] = e.target.value;
-    this.setState({ guest: update });
+    this.setState({ guests: guestsClone });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    const errors = [];
-    const lowercasedData = toLowerCase(this.state.guest);
+    const { guests } = this.state;
+    const mainGuest = guests[0];
 
-    if (this.validateData(this.guestList, this.state.guest, errors)) {
-      Axios.post(FIREBASE_CONFIG.guestURL, this.state.guest)
-      .then( _ => {
+    guests.forEach((guest, i) => {
+      const guestToPush = i === 0 ? guest :  Object.assign(guest, { main: mainGuest });
+      Axios.post(FIREBASE_CONFIG.guestURL, Object.assign(guestToPush))
+      .then(() => {
         console.log('SUCCESS');
-        this.setState(GUEST_SCHEMA);
+        this.setState([GUEST_SCHEMA]);
       });
-    } else {
-      console.warn('DUPLICATES');
-    }
-
-    this.setState({
-      errors: errors,
-    });
+    })
   }
 
-  validateData(guestList, guest, errors) {
-    const noDupes = this.validateDupes(guestList, guest, errors);
-    const noEmptyInputs = this.validateEmptyInputs(guest, errors);
-
-    return noDupes && noEmptyInputs;
-  }
-
-  validateDupes(guestList, guest, errors) {
-    return isValid = !guestList.some((RSVPedGuest) => {
-      return RSVPedGuest.firstName === guest.firstName
-      && guest.lastName === guest.lastName
-    });
-  }
-
-  validateEmptyInputs(guest, errors) {
-    return isValid = !Object.values(guest).some(input => input === "");
-  }
-
-  clearErrors() {
-    this.setState({
-      errors: []
-    });
+  validateData(guests) {
+    return validateEmptyInputs(guests);
   }
 }
+
+// Validation functions
+function validateDupes(guestList, guest) {
+  return isValid = !guestList.some((RSVPedGuest) => {
+    return RSVPedGuest.firstName === guest.firstName
+    && guest.lastName === guest.lastName
+  });
+}
+
+function validateEmptyInputs(guests) {
+  return guests.every(guest => validateEmptyInput(guest));
+}
+
+function validateEmptyInput(guest) {
+  return !Object.values(guest).some(input => input === "");
+}
+// Helper functions
 
 function parseData(data) {
   return Object.values(data);

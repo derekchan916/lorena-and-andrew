@@ -4,10 +4,17 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 15px;
 
   @media(min-width: $bp-medium) {
     flex-direction: row;
   }
+}
+
+.RSVP-title {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0 5px;
 }
 
 .RSVP-inputWrapper {
@@ -34,18 +41,4 @@
 .RSVP-inputWrapper--email {
   flex-grow: 1;
   flex-basis: 100%;
-}
-
-.RSVP-button {
-  flex-grow: 1;
-  align-self: center;
-  text-align: center;
-
-  background-color: black;
-  border-color: white;
-  color: white;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
