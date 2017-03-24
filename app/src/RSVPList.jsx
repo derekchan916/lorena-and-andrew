@@ -21,7 +21,8 @@ class RSVPList extends Component {
 
   render() {
     const { guests } = this.state;
-    const isDataValid = this.validateData(guests);
+    const isDataValid = this.validateData(guests[0]);
+    const submitClass = isDataValid ? '' : 'RSVPList-disable';
 
     return (
       <div className="content-wrapper">
@@ -36,11 +37,13 @@ class RSVPList extends Component {
                 handleChange={ this.handleChange }/>
             )
           }) }
-          <button
-            className="RSVP-inputWrapper RSVPList-button"
-            onClick={ this.handleSubmit }>
-            Submit
-          </button>
+          <div className={`RSVPList-buttonContainer ${submitClass}`}>
+            <button
+              className="RSVPList-button"
+              onClick={ this.handleSubmit }>
+              Submit
+            </button>
+          </div>
         </div>
       </div>
     )
@@ -51,29 +54,24 @@ class RSVPList extends Component {
     const { guests } = this.state;
     const name = e.target.name;
     let guestsClone = guests.slice(0);
-    window.guestsClone = guestsClone;
-    guestsClone[guestIndex][name] = e.target.value;
 
+    guestsClone[guestIndex][name] = e.target.value;
     this.setState({ guests: guestsClone });
   }
 
   handleSubmit(e) {
     e.preventDefault();
     const { guests } = this.state;
-    const mainGuest = guests[0];
 
-    guests.forEach((guest, i) => {
-      const guestToPush = i === 0 ? guest :  Object.assign(guest, { main: mainGuest });
-      Axios.post(FIREBASE_CONFIG.guestURL, Object.assign(guestToPush))
-      .then(() => {
-        console.log('SUCCESS');
-        this.setState([GUEST_SCHEMA]);
-      });
-    })
+    Axios.post(FIREBASE_CONFIG.guestURL, guests)
+    .then(() => {
+      console.log('SUCCESS');
+      this.setState([GUEST_SCHEMA]);
+    });
   }
 
-  validateData(guests) {
-    return validateEmptyInputs(guests);
+  validateData(guest) {
+    return validateEmptyInput(guest);
   }
 }
 

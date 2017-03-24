@@ -1,13 +1,22 @@
 @import '../stylesheets/_main.scss';
 
+.RSVPList-buttonContainer {
+  display: flex;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  background-color: black;
+  color: white;
+}
+
+.RSVPList-buttonContainer.RSVPList-disable {
+  background-color: #CCC;
+}
+
 .RSVPList-button {
   flex-grow: 1;
   align-self: center;
   text-align: center;
-
-  background-color: black;
-  border-color: white;
-  color: white;
 
   &:hover {
     cursor: pointer;
