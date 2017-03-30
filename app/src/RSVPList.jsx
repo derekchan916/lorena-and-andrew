@@ -13,6 +13,7 @@ class RSVPList extends Component {
     super();
     this.state = {
       guests: [GUEST_SCHEMA, GUEST_SCHEMA],
+      errors: "",
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -20,7 +21,7 @@ class RSVPList extends Component {
   }
 
   render() {
-    const { guests } = this.state;
+    const { guests, errors } = this.state;
     const isDataValid = this.validateData(guests[0]);
     const submitClass = isDataValid ? '' : 'RSVPList-disable';
 
@@ -40,10 +41,11 @@ class RSVPList extends Component {
           <div className={`RSVPList-buttonContainer ${submitClass}`}>
             <button
               className="RSVPList-button"
-              onClick={ this.handleSubmit }>
+              onClick={ (e) => this.handleSubmit(isDataValid, e) }>
               Submit
             </button>
           </div>
+          { errors }
         </div>
       </div>
     )
@@ -63,15 +65,27 @@ class RSVPList extends Component {
     this.setState({ guests: guestsUpdate });
   }
 
-  handleSubmit(e) {
+  handleSubmit(isDataValid, e) {
     e.preventDefault();
-    const { guests } = this.state;
+    const { guests, errors } = this.state;
 
-    Axios.post(FIREBASE_CONFIG.guestURL, guests)
-    .then(() => {
-      console.log('SUCCESS');
-      this.setState([GUEST_SCHEMA]);
-    });
+    if (!isDataValid) {
+      this.setState({ errors: "Please fill in everything for Guest 1"});
+      return;
+    } else {
+      Axios.post(FIREBASE_CONFIG.guestURL, guests)
+      .then(() => {
+        this.setState({
+          guests: [GUEST_SCHEMA, GUEST_SCHEMA],
+          errors: "",
+        });
+      }).catch((error) => {
+        this.setState({
+          errors: "Something went wrong :(",
+        });
+        console.warn(errors);
+      });
+    }
   }
 
   validateData(guest) {
