@@ -53,10 +53,14 @@ class RSVPList extends Component {
     e.preventDefault();
     const { guests } = this.state;
     const name = e.target.name;
-    let guestsClone = guests.slice(0);
+    const guestsUpdate = updateObjectInArray(guests, {
+      index: guestIndex,
+      item: {
+        [name]: e.target.value
+      }
+    });
 
-    guestsClone[guestIndex][name] = e.target.value;
-    this.setState({ guests: guestsClone });
+    this.setState({ guests: guestsUpdate });
   }
 
   handleSubmit(e) {
@@ -90,14 +94,27 @@ function validateEmptyInputs(guests) {
 function validateEmptyInput(guest) {
   return !Object.values(guest).some(input => input === "");
 }
-// Helper functions
 
+// Helper functions
 function parseData(data) {
   return Object.values(data);
 }
 
 function toLowerCase(data) {
   window.guest = data;
+}
+
+function updateObjectInArray(array, action) {
+  return array.map( (item, index) => {
+    if(index !== action.index) {
+      return item;
+    }
+
+    return {
+        ...item,
+        ...action.item
+    };
+  });
 }
 
 export default RSVPList;
