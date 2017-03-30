@@ -45,7 +45,7 @@ class RSVPList extends Component {
               Submit
             </button>
           </div>
-          { errors }
+          <span className="RSVPList-errors">{ errors }</span>
         </div>
       </div>
     )
@@ -68,7 +68,8 @@ class RSVPList extends Component {
   handleSubmit(isDataValid, e) {
     e.preventDefault();
     const { guests, errors } = this.state;
-
+    const filteredGuests = filterArray(guests);
+    console.log(filteredGuests);
     if (!isDataValid) {
       this.setState({ errors: "Please fill in everything for Guest 1"});
       return;
@@ -128,6 +129,12 @@ function updateObjectInArray(array, action) {
         ...item,
         ...action.item
     };
+  });
+}
+
+function filterArray(array) {
+  return array.filter((object) => {
+    return !Object.values(object).every(el => el === "");
   });
 }
 
