@@ -9,7 +9,7 @@ const compiler = webpack(webpackConfig);
 app.use(express.static(__dirname));
 
 app.use(webpackDevMiddleware(compiler, {
-  hot: true,
+  hot: false,
   filename: 'react-bundle.js',
   publicPath: '/',
   stats: {
