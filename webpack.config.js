@@ -1,6 +1,8 @@
+const path = require('path');
+
 module.exports = {
   context: __dirname,
-  entry: "./app/index.jsx",
+  entry: path.resolve(__dirname, "app/index.jsx"),
   output: {
     path: "/",
     filename: "react-bundle.js"
