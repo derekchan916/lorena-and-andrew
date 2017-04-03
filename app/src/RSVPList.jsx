@@ -107,12 +107,12 @@ function validateEmptyInputs(guests) {
 }
 
 function validateEmptyInput(guest) {
-  return !Object.values(guest).some(input => input === "");
+  return !Object.keys(guest).some(input => input === "");
 }
 
 // Helper functions
 function parseData(data) {
-  return Object.values(data);
+  return Object.keys(data);
 }
 
 function toLowerCase(data) {
@@ -134,7 +134,7 @@ function updateObjectInArray(array, action) {
 
 function filterArray(array) {
   return array.filter((object) => {
-    return !Object.values(object).every(el => el === "");
+    return !Object.keys(object).every(el => el === "");
   });
 }
 
