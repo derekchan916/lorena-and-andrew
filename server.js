@@ -6,6 +6,7 @@ const webpackConfig = require('./webpack.config.js');
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const app = express();
 const http = require('http');
+const path = require('path');
 const server = http.createServer(app);
 
 if (isDeveloping) {
