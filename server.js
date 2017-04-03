@@ -5,7 +5,8 @@ const webpackConfig = require('./webpack.config.js');
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
 const app = express();
-
+const http = require('http');
+const server = http.createServer(app);
 
 if (isDeveloping) {
   const compiler = webpack(webpackConfig);
@@ -28,9 +29,7 @@ if (isDeveloping) {
   });
 }
 
-
-const server = app.listen(8080, function() {
-  const host = server.address().address;
-  const port = server.address().port;
-  console.log('Example app listening at http://%s:%s', host, port);
+server.listen(process.env.PORT || 3000);
+server.on('listening', function() {
+  console.log('Express server started on port %s at %s', server.address().port, server.address().address); // eslint-disable-line no-console
 });
