@@ -8,7 +8,7 @@ class Party extends Component {
 
   render() {
     return (
-      <div className="content-wrapper">
+      <div className="content-wrapper" id="weddingParty">
         <div className="content-container">
           <h1>PARTY TIME</h1>
           { this.renderPartyList() }

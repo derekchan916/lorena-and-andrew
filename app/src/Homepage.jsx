@@ -14,7 +14,7 @@ class Homepage extends Component {
   render () {
 
     return (
-      <div className="Homepage">
+      <div className="Homepage" id="home">
         <Header />
         <MainImage />
         <Summary />

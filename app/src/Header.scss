@@ -2,13 +2,19 @@
 
 .Header-wrapper {
   display: none;
+  border-bottom: 1px solid #ccc;
 
   @media(min-width: $bp-medium) {
     display: block;
-    // position: absolute;
     width: 100%;
     top: 0;
   }
+}
+
+.Header-fixed {
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
 }
 
 .Header-list {

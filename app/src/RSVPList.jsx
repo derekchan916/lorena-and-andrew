@@ -11,6 +11,7 @@ class RSVPList extends Component {
 
   constructor() {
     super();
+
     this.state = {
       guests: [GUEST_SCHEMA, GUEST_SCHEMA],
       errors: "",
@@ -26,7 +27,7 @@ class RSVPList extends Component {
     const submitClass = isDataValid ? '' : 'RSVPList-disable';
 
     return (
-      <div className="content-wrapper">
+      <div className="content-wrapper" id="rsvp">
         <div className="content-container">
           <h1>RSVP</h1>
           { this.state.guests.map((guest, i) => {

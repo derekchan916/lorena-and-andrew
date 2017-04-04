@@ -7,7 +7,7 @@ class Events extends Component {
 
   render() {
     return (
-      <div className="Events-wrapper content-wrapper">
+      <div className="Events-wrapper content-wrapper" id="events">
         <div className="content-container">
           <h1>EVENTS</h1>
           <div className="Events-content">
@@ -46,7 +46,11 @@ class Events extends Component {
       <div id="map" className="Events-mapWrapper">
         <GoogleMapReact
           defaultCenter={{ lat: 59.95, lng: 30.33 }}
-          defaultZoom={ 11 } />
+          defaultZoom={ 11 }
+          bootstrapURLKeys={{
+            key: 'AIzaSyDWxAi_7xdjypBlabS-IEktlLsaW0EpYhY',
+            language: 'ru',
+          }}/>
       </div>
     )
   }

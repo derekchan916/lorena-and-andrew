@@ -13,7 +13,28 @@ const GUEST_SCHEMA = {
   email: '',
 }
 
-const HEADER_LINKS = [ 'HOME', 'EVENTS', 'WEDDING PARTY', 'TRAVEL', 'RSVP' ];
+const HEADER_LINKS = [
+  {
+    title: 'HOME',
+    id: 'home',
+  },
+  {
+    title: 'EVENTS',
+    id: 'events',
+  },
+  {
+    title: 'WEDDING PARTY',
+    id: 'weddingParty',
+  },
+  {
+    title: 'TRAVEL',
+    id: 'travel',
+  },
+  {
+    title: 'RSVP',
+    id: 'rsvp',
+  },
+]
 
 const PARTY_PEOPLE = [
   {
