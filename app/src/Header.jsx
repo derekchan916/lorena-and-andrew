@@ -12,7 +12,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        { this.renderHeader() }
+        { this.renderHeader('normal') }
         { this.renderHeader('fixed') }
       </div>
     )
@@ -23,6 +23,10 @@ class Header extends Component {
 
     return (
       <div className={`Header-wrapper ${className}`}>
+        { format === 'normal' ?
+        <div className="Header-headerWrapper">
+          <span className="Header-header">Lorena + Andrew</span>
+        </div> : null }
         <li className='Header-list'>
           { HEADER_LINKS.map((linkObj, key) => {
             return (

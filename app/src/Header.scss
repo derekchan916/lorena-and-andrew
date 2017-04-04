@@ -12,9 +12,19 @@
 }
 
 .Header-fixed {
+  display: none;
   position: fixed;
   z-index: 1000;
   background-color: white;
+}
+
+.Header-headerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 15px;
+  font-family: 'NightWind';
+  font-size: 48px;
 }
 
 .Header-list {
