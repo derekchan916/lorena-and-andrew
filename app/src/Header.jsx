@@ -8,6 +8,22 @@ import Scroll from 'react-scroll';
 const Link = Scroll.Link;
 
 class Header extends Component {
+  constructor() {
+    super();
+
+    this.handleScroll = this.handleScroll.bind(this);
+    this.state = {
+      fixedHeaderActive: false,
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
 
   render() {
     return (
@@ -19,13 +35,14 @@ class Header extends Component {
   }
 
   renderHeader(format) {
-    const className = format === 'fixed' ? 'Header-fixed' : '';
+    const className = format === 'fixed' ?
+      this.state.fixedHeaderActive ? 'Header-fixed' : 'Header-fixedDisable': '';
 
     return (
       <div className={`Header-wrapper ${className}`}>
         { format === 'normal' ?
-        <div className="Header-headerWrapper">
-          <span className="Header-header">Lorena + Andrew</span>
+        <div className="Header-header">
+          <span>Lorena + Andrew</span>
         </div> : null }
         <li className='Header-list'>
           { HEADER_LINKS.map((linkObj, key) => {
@@ -40,6 +57,14 @@ class Header extends Component {
         </li>
       </div>
     )
+  }
+
+  handleScroll() {
+    if (scrollY > 70) {
+      this.setState({ fixedHeaderActive: true });
+    } else {
+      this.setState({ fixedHeaderActive: false });
+    }
   }
 }
 
