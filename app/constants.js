@@ -17,22 +17,27 @@ const HEADER_LINKS = [
   {
     title: 'HOME',
     id: 'home',
+    offset: -15,
   },
   {
     title: 'EVENTS',
     id: 'events',
+    offset: -64,
   },
   {
     title: 'WEDDING PARTY',
     id: 'weddingParty',
+    offset: -64,
   },
   {
     title: 'TRAVEL',
     id: 'travel',
+    offset: -64,
   },
   {
     title: 'RSVP',
     id: 'rsvp',
+    offset: -64,
   },
 ]
 

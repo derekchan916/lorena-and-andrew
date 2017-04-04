@@ -48,7 +48,11 @@ class Header extends Component {
           { HEADER_LINKS.map((linkObj, key) => {
             return (
               <ul key={ key }>
-                <Link to={ linkObj.id } smooth={true} duration={200}>
+                <Link
+                  to={ linkObj.id }
+                  smooth={true} 
+                  duration={200}
+                  offset={ linkObj.offset }>
                   { linkObj.title }
                 </Link>
               </ul>
