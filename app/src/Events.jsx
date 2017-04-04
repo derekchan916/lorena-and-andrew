@@ -58,7 +58,7 @@ class Events extends Component {
     return (
       <div id="map" className="Events-mapWrapper">
         <GoogleMapReact
-          defaultCenter={{ lat: 43.7455298, lng: -79.3932232 }}
+          defaultCenter={{ lat: 43.711842, lng: -79.3491519 }}
           defaultZoom={ 10 }
           bootstrapURLKeys={{
             key: 'AIzaSyDWxAi_7xdjypBlabS-IEktlLsaW0EpYhY',

@@ -21,6 +21,11 @@
     margin-bottom: $gutter-small;
   }
 
+	a:link {color: #007DC3; text-decoration: underline; }
+	a:active {color: #0000ff; text-decoration: underline; }
+	a:visited {color: #008000; text-decoration: underline; }
+	a:hover {color: #ff0000; text-decoration: none; }
+
   .content-wrapper {
     padding: $content-top-padding $content-side-padding;
     border-bottom: 1px solid #CCC;
