@@ -1,0 +1,20 @@
+
+.EventsPin {
+  position: 'absolute';
+  width: 40;
+  height: 40;
+  left: -20;
+  top: -20;
+
+  width: 25px;
+  height: 25px;
+  border: 1px solid #CCC;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 16;
+  font-weight: 'bold';
+}
