@@ -126,7 +126,8 @@ function validateEmptyInputs(guests) {
 }
 
 function validateEmptyInput(guest) {
-  return !Object.values(guest).some(input => input === "");
+
+  return !Object.keys(guest).some(input => guest[input] === "");
 }
 
 // Helper functions
@@ -153,7 +154,7 @@ function updateObjectInArray(array, action) {
 
 function filterArray(array) {
   return array.filter((object) => {
-    return !Object.values(object).every(el => el === "");
+    return !Object.keys(object).every(el => object[el] === "");
   });
 }
 

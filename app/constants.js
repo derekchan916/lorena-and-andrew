@@ -101,7 +101,7 @@ const PARTY_PEOPLE = [
     description: [
       "Philip is currently a manager at Figure1 in Toronto."
     ],
-    image: 'app/images/Phillip.jpg'
+    image: 'app/images/Phillip.JPG'
   },
   {
     name: 'JACLYN SING',
@@ -110,7 +110,7 @@ const PARTY_PEOPLE = [
       "Jaclyn and I have been close friends for more than forever (16+ years) ever since we first met way back in Grade 3. Since Grade school, we grew up sitting in her kitchen, eating man cookies, and contemplating the mysteries of life and continue this tradition today. She challenges me to think below the surface and to think more critically and broadly about everything. We also love curry fishballs.",
       "Jaclyn is currently a nurse in Vancouver."
     ],
-    image: 'app/images/jacylylyn.jpg'
+    image: 'app/images/jacylylyn.JPG'
   },
   {
     name: 'JANET WU',
