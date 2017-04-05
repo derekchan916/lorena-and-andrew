@@ -15,6 +15,7 @@ class RSVPList extends Component {
     this.state = {
       guests: [GUEST_SCHEMA, GUEST_SCHEMA],
       errors: "",
+      formFilled: false,
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,10 +23,25 @@ class RSVPList extends Component {
   }
 
   render() {
-    const { guests, errors } = this.state;
+    const { guests, errors, formFilled} = this.state;
     const isDataValid = this.validateData(guests[0]);
-    console.log(isDataValid);
     const submitClass = isDataValid ? '' : 'RSVPList-disable';
+
+    if (formFilled) {
+      return (
+        <div className="content-wrapper" id="rsvp">
+          <div className="content-container">
+            <h1>RSVP</h1>
+            <div className="RSVPList-successMessage">
+              <img
+                className="RSVPList-successImage"
+                src='app/images/lorena-andrew-2.gif'/>
+              <h2>Can't wait to see you there!</h2>
+            </div>
+          </div>
+        </div>
+      )
+    }
 
     return (
       <div className="content-wrapper" id="rsvp">
@@ -81,6 +97,7 @@ class RSVPList extends Component {
         this.setState({
           guests: [GUEST_SCHEMA, GUEST_SCHEMA],
           errors: "",
+          formFilled: true,
         });
       }).catch((error) => {
         this.setState({
