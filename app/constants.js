@@ -138,7 +138,7 @@ const PARTY_PEOPLE = [
     description: [
       "Malti-poo and poo",
     ],
-    image: 'toro-1.png'
+    image: 'app/images/toro-1.png'
   },
 ];
 

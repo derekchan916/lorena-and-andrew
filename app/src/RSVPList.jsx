@@ -24,6 +24,7 @@ class RSVPList extends Component {
   render() {
     const { guests, errors } = this.state;
     const isDataValid = this.validateData(guests[0]);
+    console.log(isDataValid);
     const submitClass = isDataValid ? '' : 'RSVPList-disable';
 
     return (
@@ -70,7 +71,7 @@ class RSVPList extends Component {
     e.preventDefault();
     const { guests, errors } = this.state;
     const filteredGuests = filterArray(guests);
-    console.log(filteredGuests);
+
     if (!isDataValid) {
       this.setState({ errors: "Please fill in everything for Guest 1"});
       return;
@@ -108,7 +109,7 @@ function validateEmptyInputs(guests) {
 }
 
 function validateEmptyInput(guest) {
-  return !Object.keys(guest).some(input => input === "");
+  return !Object.values(guest).some(input => input === "");
 }
 
 // Helper functions
@@ -135,7 +136,7 @@ function updateObjectInArray(array, action) {
 
 function filterArray(array) {
   return array.filter((object) => {
-    return !Object.keys(object).every(el => el === "");
+    return !Object.values(object).every(el => el === "");
   });
 }
 
