@@ -1,0 +1,39 @@
+@import '../stylesheets/_main.scss';
+
+.Travel-HotelsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  &> li {
+    padding: 20px 30px 30px;
+    text-align: center;
+    flex-basis: 50%;
+  }
+
+  & span {
+    display: block;
+  }
+
+  @media(min-width: $bp-medium) {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.Travel-HotelsLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+
+  &> img {
+    width: 100%;
+  }
+}
+
+.Travel-OtherAccomodations {
+  text-align: center;
+}

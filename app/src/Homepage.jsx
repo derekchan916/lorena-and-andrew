@@ -2,12 +2,13 @@ import './Homepage.scss';
 
 import React, { Component } from 'react';
 
+import Events from './Events';
 import Header from './Header';
 import MainImage from './MainImage';
-import Summary from './Summary';
-import Events from './Events';
 import Party from './Party';
 import RSVPList from './RSVPList';
+import Summary from './Summary';
+import Travel from './Travel';
 
 class Homepage extends Component {
 
@@ -20,6 +21,7 @@ class Homepage extends Component {
         <Summary />
         <Events />
         <Party />
+        <Travel />
         <RSVPList />
       </div>
     )

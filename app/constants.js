@@ -49,7 +49,7 @@ const PARTY_PEOPLE = [
       "Olivia and Scott's extremely caring nature naturally meant that they became Lorena's pseudo mom and dad in New York. Olivia and Lorena both work at Novantas together (in fact, we share an office) and provides daily and weekly advice and Scott would pack lunch for Olivia and Lorena. They are a great team, and the wittiest and most sarcastic people/couple that we know!",
       "Olivia and Scott are both consultants in New York at Novantas and Deloitte respectively. They are also getting married this June in Chicago (CONGRATS!)"
     ],
-    image: 'app/images/derek-1.jpg',
+    image: 'app/images/Olivia.jpg',
   },
   {
     name: 'FLORA CHAN',
@@ -101,7 +101,7 @@ const PARTY_PEOPLE = [
     description: [
       "Philip is currently a manager at Figure1 in Toronto."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/Phillip.jpg'
   },
   {
     name: 'JACLYN SING',
@@ -110,7 +110,7 @@ const PARTY_PEOPLE = [
       "Jaclyn and I have been close friends for more than forever (16+ years) ever since we first met way back in Grade 3. Since Grade school, we grew up sitting in her kitchen, eating man cookies, and contemplating the mysteries of life and continue this tradition today. She challenges me to think below the surface and to think more critically and broadly about everything. We also love curry fishballs.",
       "Jaclyn is currently a nurse in Vancouver."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/jacylylyn.jpg'
   },
   {
     name: 'JANET WU',
@@ -128,7 +128,7 @@ const PARTY_PEOPLE = [
       "Haylie is Flora's daughter and Lorena's and Derek's niece. She's an adorable one and a half year old and loves dogs!",
       "Haylie currently works as a full-time baby in Hong Kong."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/haylie-1.jpg'
   },
   {
     name: 'TORO',
