@@ -37,4 +37,8 @@
   margin: 0 auto;
   padding: 20px $content-side-padding;
   max-width: $content-max-width;
+
+  a:hover {
+    cursor: pointer;
+  }
 }

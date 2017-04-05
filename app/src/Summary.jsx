@@ -8,7 +8,7 @@ class Summary extends Component {
     return (
       <div className='content-wrapper'>
         <div className='content-container'>
-          <h1>OUR STORY</h1>
+          <h1>Our Story</h1>
           <div className="Summary-block">
             <span>
               We met each other on the first day of university during Orientation week at Waterloo and became fast friends through late-night study groups, piano sessions and dumplings. In summer of second year, we officially started dating.

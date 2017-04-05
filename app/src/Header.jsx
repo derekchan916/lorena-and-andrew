@@ -44,21 +44,21 @@ class Header extends Component {
         <div className="Header-header">
           <span>Lorena + Andrew</span>
         </div> : null }
-        <li className='Header-list'>
+        <ul className='Header-list'>
           { HEADER_LINKS.map((linkObj, key) => {
             return (
-              <ul key={ key }>
+              <li key={ key }>
                 <Link
                   to={ linkObj.id }
-                  smooth={true} 
+                  smooth={true}
                   duration={200}
                   offset={ linkObj.offset }>
                   { linkObj.title }
                 </Link>
-              </ul>
+              </li>
             )
           }) }
-        </li>
+        </ul>
       </div>
     )
   }

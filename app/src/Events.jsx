@@ -11,7 +11,7 @@ class Events extends Component {
     return (
       <div className="Events-wrapper content-wrapper" id="events">
         <div className="content-container">
-          <h1>EVENTS</h1>
+          <h1>Events</h1>
           <div className="Events-content">
             { this.renderEventList() }
             { this.renderEventMap() }
@@ -25,7 +25,7 @@ class Events extends Component {
     return (
       <li className="Events-detailList">
         <ul>
-          <h2>WELCOME DINNER</h2>
+          <h2>1. WELCOME DINNER</h2>
           <div className="Events-subDetails">
             <span>6:00 PM, Saturday, July 8th, 2017</span>
             <span>金廷宴 Golden Palace Banquet Hall Golden</span>
@@ -34,7 +34,7 @@ class Events extends Component {
         </ul>
 
         <ul>
-          <h2>CELEBRATION PARTY</h2>
+          <h2>2. CELEBRATION PARTY</h2>
           <div className="Events-subDetails">
             <span>10:00 PM, Saturday July 8th, 2017</span>
             <span>The Cloak Bar</span>
@@ -43,7 +43,7 @@ class Events extends Component {
         </ul>
 
         <ul>
-          <h2>CEREMONY AND RECEPTION</h2>
+          <h2>3. CEREMONY & RECEPTION</h2>
           <div className="Events-subDetails">
             <span>11:00 AM, Sunday, July 9th,  2017</span>
             <span>Berkeley Fieldhouse</span>

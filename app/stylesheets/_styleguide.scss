@@ -2,12 +2,13 @@
 @import './fonts/_fonts.scss';
 
 .Styleguide {
-	font-family: Brandon;
+	font-family: brandon;
 	height: 100%;
 
 	h1 {
 		font-size: $font-size-h1;
     margin-bottom: 40px;
+    font-family: NightWind;
     text-align: center;
 	}
 

@@ -43,10 +43,10 @@ const HEADER_LINKS = [
 
 const PARTY_PEOPLE = [
   {
-    name: 'OLIVIA LUI AND SCOTT FRY',
+    name: 'OLIVIA LUI & SCOTT FRY',
     position: 'Officiants',
     description: [
-      "Olivia and Scott's extremely caring nature naturally meant that they basically became Lorena's pseudo mom and dad here in New York. Olivia and Lorena both work at Novantas together (in fact, we share an office) and provides daily and weekly advice and Scott would pack lunch for Olivia and Lorena! They are a great team, and the wittiest and most sarcastic people/couple that we know!",
+      "Olivia and Scott's extremely caring nature naturally meant that they became Lorena's pseudo mom and dad in New York. Olivia and Lorena both work at Novantas together (in fact, we share an office) and provides daily and weekly advice and Scott would pack lunch for Olivia and Lorena. They are a great team, and the wittiest and most sarcastic people/couple that we know!",
       "Olivia and Scott are both consultants in New York at Novantas and Deloitte respectively. They are also getting married this June in Chicago (CONGRATS!)"
     ],
     image: 'app/images/derek-1.jpg',
@@ -55,7 +55,7 @@ const PARTY_PEOPLE = [
     name: 'FLORA CHAN',
     position: 'Maid of Honour, Sister of the Bride',
     description: [
-      "If you were ever curious as to what a mature and cooler version of Lorena would've been, all you would need to do is look to Flora, her older sister. Flora is the quintessential older sister, ignoring Lorena's annoying behaviour on a day-to-day basis, but always stepping in to play the mediator between parents and siblings. She's always there to lend a ear and provide advice, despite being half way across the world.",
+      "If you were ever curious as to what a mature and cooler version of Lorena would've been, all you would need to do is look to Flora, her older sister. Flora is the quintessential older sister, ignoring Lorena's annoying behaviour on a day-to-day basis, but stepping in to play the mediator between parents and siblings. She's always there to lend a ear and provide advice, despite being half way across the world.",
       "Flora is currently a lawyer at Linklaters in Hong Kong. She's also a proud mom!"
     ],
     image: 'app/images/derek-1.jpg'
@@ -82,7 +82,7 @@ const PARTY_PEOPLE = [
     name: 'CAROLINE CHIU',
     position: 'Bridesmaid',
     description: [
-      "When Caroline and Lorena first met, they did not get along. One thought the other was kind of odd, and the other just thought the other was quiet (won't mention who thought what, but I'm sure you can guess). Little did Caroline know, that Chemistry class would mean that she would be forced to sit next to me and become my life-long friend. Caroline is a great dancer and friend, and continues to inspire me with her many artistic and agricultural interests every day!",
+      "When Caroline and Lorena first met, they did not get along. One thought the other was kind of odd, and the other just thought the other was quiet (won't mention who thought what, but I'm sure you can guess). Little did Caroline know, Chemistry class would mean that she would be forced to sit next to me and become my life-long friend. Caroline is a great dancer and friend, and continues to inspire me with her many artistic and agricultural interests every day!",
       "Caroline is economist and co-owner of Riverside Farms."
     ],
     image: 'app/images/derek-1.jpg'

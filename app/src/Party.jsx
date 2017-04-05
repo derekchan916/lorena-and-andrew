@@ -10,7 +10,7 @@ class Party extends Component {
     return (
       <div className="content-wrapper" id="weddingParty">
         <div className="content-container">
-          <h1>PARTY TIME</h1>
+          <h1>Party Time</h1>
           <span className="Party-subtitle">We are so honoured to have our closest friends and family be at our wedding and want you to get to know them too!</span>
           { this.renderPartyList() }
         </div>
