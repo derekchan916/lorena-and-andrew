@@ -2,9 +2,12 @@
 
 .Party-subtitle {
   display: block;
-  width: 500px;
   text-align: center;
   margin: 0 auto 50px;
+
+  @media(min-width: $bp-medium) {
+    width: 500px;
+  }
 }
 
 .Party-listItem {
