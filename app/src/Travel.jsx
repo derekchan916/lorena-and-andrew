@@ -13,7 +13,7 @@ class Travel extends Component {
           <ul className="Travel-HotelsContainer">
             <li>
               <div className="Travel-HotelsLogoWrapper">
-                <img src='app/images/Sheraton_hotels.svg.png'/>
+                <img src='app/images/Sheraton_Hotels.svg.png'/>
               </div>
               <h2>Sheraton Centre Hotel</h2>
               <span>123 Queen St W, Toronto, ON M5H 2M9</span>
