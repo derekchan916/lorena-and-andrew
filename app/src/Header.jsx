@@ -36,7 +36,7 @@ class Header extends Component {
 
   renderHeader(format) {
     const className = format === 'fixed' ?
-      this.state.fixedHeaderActive ? 'Header-fixed' : 'Header-fixedDisable': '';
+      this.state.fixedHeaderActive ? 'Header-fixed' : 'Header-fixedDisable' : 'Header-normal';
 
     return (
       <div className={`Header-wrapper ${className}`}>
