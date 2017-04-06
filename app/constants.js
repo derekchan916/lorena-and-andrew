@@ -93,7 +93,7 @@ const PARTY_PEOPLE = [
     description: [
       "Chris currently works at Shell."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/Chris.JPG'
   },
   {
     name: 'PHILIP LA',
