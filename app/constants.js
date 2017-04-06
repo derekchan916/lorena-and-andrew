@@ -53,7 +53,7 @@ const PARTY_PEOPLE = [
   },
   {
     name: 'FLORA CHAN',
-    position: 'Maid of Honour, Sister of the Bride',
+    position: 'Matron of Honour, Sister of the Bride',
     description: [
       "If you were ever curious as to what a mature and cooler version of Lorena would've been, all you would need to do is look to Flora, her older sister. Flora is the quintessential older sister, ignoring Lorena's annoying behaviour on a day-to-day basis, but stepping in to play the mediator between parents and siblings. She's always there to lend a ear and provide advice, despite being half way across the world.",
       "Flora is currently a lawyer at Linklaters in Hong Kong. She's also a proud mom!"
