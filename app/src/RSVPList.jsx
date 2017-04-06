@@ -92,7 +92,7 @@ class RSVPList extends Component {
       this.setState({ errors: "Please fill in everything for Guest 1"});
       return;
     } else {
-      Axios.post(FIREBASE_CONFIG.guestURL, guests)
+      Axios.post(FIREBASE_CONFIG.guestURL, filteredGuests)
       .then(() => {
         this.setState({
           guests: [GUEST_SCHEMA, GUEST_SCHEMA],

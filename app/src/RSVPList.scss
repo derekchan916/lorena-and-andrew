@@ -29,7 +29,11 @@
 }
 
 .RSVPList-successImage {
-  width: 400px;
+  width: 280px;
+
+  @media(min-width: $bp-medium) {
+    width: 400px;
+  }
 }
 
 .RSVPList-errors {

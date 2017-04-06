@@ -30,7 +30,7 @@ if (isDeveloping) {
   });
 }
 
-server.listen(process.env.PORT || 3000);
+server.listen(process.env.PORT || 8080);
 server.on('listening', function() {
   console.log('Express server started on port %s at %s', server.address().port, server.address().address); // eslint-disable-line no-console
 });
