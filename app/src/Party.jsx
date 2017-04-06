@@ -20,10 +20,10 @@ class Party extends Component {
 
   renderPartyList() {
     return (
-      <li>
+      <ul>
         { PARTY_PEOPLE.map((person, i) => {
           return (
-            <ul className="Party-listItem" key={ i }>
+            <li className="Party-listItem" key={ i }>
               <div className="Party-listDetails">
                 <h2>{ person.name }</h2>
                 <span className="Party-listPosition">{ person.position }</span>
@@ -35,14 +35,18 @@ class Party extends Component {
                 }) }
               </div>
               <div className="Party-listImageWrapper">
-                <img
+                { person.image ? <img
                   src={ person.image }
-                  className="Party-listImage "/>
+                  className="Party-listImage "/> : null }
+                { person.video ?
+                  <video width="300" height="300" autoPlay loop>
+                    <source src={ person.video } type="video/mp4" />
+                  </video> : null }
               </div>
-            </ul>
+            </li>
           )
         })}
-      </li>
+      </ul>
     )
   }
 }

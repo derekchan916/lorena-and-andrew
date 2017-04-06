@@ -27,7 +27,7 @@ class Events extends Component {
         <ul>
           <h2>1. WELCOME DINNER</h2>
           <div className="Events-subDetails">
-            <span>6:00 PM, Saturday, July 8th, 2017</span>
+            <span>TBD, Saturday, July 8th, 2017</span>
             <span>金廷宴 Golden Palace Banquet Hall Golden</span>
             <span>First Markham Place, 3225 Hwy 7 #1, Markham, ON L3R 3P3</span>
           </div>
@@ -36,7 +36,7 @@ class Events extends Component {
         <ul>
           <h2>2. CELEBRATION PARTY</h2>
           <div className="Events-subDetails">
-            <span>10:00 PM, Saturday July 8th, 2017</span>
+            <span>After dinner, Saturday July 8th, 2017</span>
             <span>The Cloak Bar</span>
             <span>488 Wellington St W, Toronto, ON M5V 1E9</span>
           </div>
@@ -45,7 +45,7 @@ class Events extends Component {
         <ul>
           <h2>3. CEREMONY & RECEPTION</h2>
           <div className="Events-subDetails">
-            <span>11:00 AM, Sunday, July 9th,  2017</span>
+            <span>TBD, Sunday, July 9th,  2017</span>
             <span>Berkeley Fieldhouse</span>
             <span>311 Queen St. E, Toronto, ON, M5A 1S7</span>
           </div>
