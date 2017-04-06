@@ -58,7 +58,7 @@ const PARTY_PEOPLE = [
       "If you were ever curious as to what a mature and cooler version of Lorena would've been, all you would need to do is look to Flora, her older sister. Flora is the quintessential older sister, ignoring Lorena's annoying behaviour on a day-to-day basis, but stepping in to play the mediator between parents and siblings. She's always there to lend a ear and provide advice, despite being half way across the world.",
       "Flora is currently a lawyer at Linklaters in Hong Kong. She's also a proud mom!"
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/flora.jpg'
   },
   {
     name: 'KEVIN WONG',
@@ -66,7 +66,7 @@ const PARTY_PEOPLE = [
     description: [
       "Kevin currently works at a health start-up in Toronto."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/kevin.jpeg'
   },
   {
     name: 'DEREK CHAN',
@@ -85,7 +85,7 @@ const PARTY_PEOPLE = [
       "When Caroline and Lorena first met, they did not get along. One thought the other was kind of odd, and the other just thought the other was quiet (won't mention who thought what, but I'm sure you can guess). Little did Caroline know, Chemistry class would mean that she would be forced to sit next to me and become my life-long friend. Caroline is a great dancer and friend, and continues to inspire me with her many artistic and agricultural interests every day!",
       "Caroline is economist and co-owner of Riverside Farms."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/caroline.jpg'
   },
   {
     name: 'CHRIS JANG',
@@ -119,7 +119,7 @@ const PARTY_PEOPLE = [
       "Miss Wu is one of the most patient and caring people I know and is basically the only reason why I survived university. We did every assignment, lab group and class together and lived together. We saw and spent a lot of our waking moments with each other. She's super supportive and always challenges me to be a kinder and more practical version of myself. I can't wait to continue seeing you every Christmas!",
       "Janet currently works as an engineer in Hong Kong."
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/janet.jpg'
   },
   {
     name: 'HAYLIE WU',
@@ -128,7 +128,15 @@ const PARTY_PEOPLE = [
       "Haylie is Flora's daughter and Lorena's and Derek's niece. She's an adorable one and a half year old and loves dogs!",
       "Haylie currently works as a full-time baby in Hong Kong."
     ],
-    image: 'app/images/haylie-1.jpg'
+    image: 'app/images/haylie-1.jpg',
+  },
+  {
+    name: 'HAYLIE WU',
+    description: [
+      "A video of haylie",
+      "Sorry, I had to",
+    ],
+    video: 'app/images/haylie-video.mp4',
   },
   {
     name: 'TORO',
