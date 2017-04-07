@@ -136,7 +136,8 @@ const PARTY_PEOPLE = [
     instagram: '@gofindtoro',
     position: "Flower Puppy",
     description: [
-      "Malti-poo and poo",
+      "Toro will be accompanying beautiful flower girl Haylie Wu to walk to isle.",
+      "Good boy Toro, good boy."
     ],
     image: 'app/images/toro-1.png'
   },
