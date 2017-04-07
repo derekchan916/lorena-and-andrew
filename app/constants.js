@@ -76,7 +76,7 @@ const PARTY_PEOPLE = [
       "Derek is Lorena's little brother and is the absolute best. He is super patient, and puts up with my shenanigans all the time. Growing up with him was no easy feat, but as we became older we started to develop mutual understanding of each other's craziness. After living together for two years in New York, we still enjoy each other's company and continue to uphold family dinners every Sunday night.",
       "Derek works as a grunt farmer in the fields of Rivendale.",
     ],
-    image: 'app/images/derek-1.jpg'
+    image: 'app/images/Derek.jpg'
   },
   {
     name: 'CAROLINE CHIU',
@@ -129,14 +129,6 @@ const PARTY_PEOPLE = [
       "Haylie currently works as a full-time baby in Hong Kong."
     ],
     image: 'app/images/haylie-1.jpg',
-  },
-  {
-    name: 'HAYLIE WU',
-    description: [
-      "A video of haylie",
-      "Sorry, I had to",
-    ],
-    video: 'app/images/haylie-video.mp4',
   },
   {
     name: 'TORO',

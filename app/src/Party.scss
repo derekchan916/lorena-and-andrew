@@ -75,3 +75,45 @@
   display: block;
   margin-bottom: 10px;
 }
+
+.Party-videoWrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Party-videoLink {
+  color: #007DC3;
+  text-decoration: underline;
+  cursor: pointer;
+  
+  &:active {color: #0000ff; text-decoration: underline; }
+  &:visited {color: #008000; text-decoration: underline; }
+  &:hover {color: #ff0000; text-decoration: none; }
+}
+
+.Party-video {
+  height: 95%;
+}
+
+.Party-videoExit {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

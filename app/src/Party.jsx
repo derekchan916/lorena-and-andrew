@@ -6,6 +6,14 @@ import { PARTY_PEOPLE } from '../constants';
 
 class Party extends Component {
 
+  constructor() {
+    super();
+
+    this.state = ({ showVideo: false });
+    this.openVideo = this.openVideo.bind(this);
+    this.closeVideo = this.closeVideo.bind(this);
+  }
+
   render() {
     return (
       <div className="content-wrapper" id="weddingParty">
@@ -13,6 +21,7 @@ class Party extends Component {
           <h1>Party Time</h1>
           <span className="Party-subtitle">We are so honoured to have our closest friends and family be at our wedding and want you to get to know them too!</span>
           { this.renderPartyList() }
+          { this.renderFullVideo() }
         </div>
       </div>
     )
@@ -28,6 +37,8 @@ class Party extends Component {
                 <h2>{ person.name }</h2>
                 <span className="Party-listPosition">{ person.position }</span>
                 <a target='_blank' href={ person.link }>{ person.instagram }</a>
+                { person.name === 'HAYLIE WU' ?
+                <span className="Party-videoLink" onClick={ this.openVideo }>Click Here</span> : null }
                 { person.description.map((script, key) => {
                   return (
                     <span key={ key } className="Party-listDescription">{ script }</span>
@@ -38,16 +49,35 @@ class Party extends Component {
                 { person.image ? <img
                   src={ person.image }
                   className="Party-listImage "/> : null }
-                { person.video ?
-                  <video width="300" height="300" autoPlay loop>
-                    <source src={ person.video } type="video/mp4" />
-                  </video> : null }
               </div>
             </li>
           )
         })}
       </ul>
     )
+  }
+
+  renderFullVideo() {
+    const { showVideo } = this.state;
+
+    if (!showVideo) { return null };
+
+    return (
+      <div className="Party-videoWrapper">
+        <video className="Party-video" autoPlay loop>
+          <source src='app/images/haylie-video.mp4' type="video/mp4" />
+        </video>
+        <span className="Party-videoExit" onClick={ this.closeVideo }>x</span>
+      </div>
+    )
+  }
+
+  openVideo() {
+    this.setState({ showVideo: true });
+  }
+
+  closeVideo() {
+    this.setState({ showVideo: false });
   }
 }
 
