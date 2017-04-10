@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 import RSVP from './RSVP';
 
-import { FIREBASE_CONFIG, GUEST_SCHEMA } from '../constants';
+import { FIREBASE_CONFIG, GUEST_SCHEMA, GUEST_SCHEME_CHECKBOXES } from '../constants';
 
 class RSVPList extends Component {
 
@@ -122,7 +122,7 @@ class RSVPList extends Component {
   }
 
   validateData(guest) {
-    return validateEmptyInput(guest);
+    return validateEmptyInput(guest) && validateCheckboxes(guest);
   }
 }
 
@@ -139,8 +139,11 @@ function validateEmptyInputs(guests) {
 }
 
 function validateEmptyInput(guest) {
-
   return !Object.keys(guest).some(input => guest[input] === "");
+}
+
+function validateCheckboxes(guest) {
+  return !GUEST_SCHEME_CHECKBOXES.every(check => guest[check] === false);
 }
 
 // Helper functions

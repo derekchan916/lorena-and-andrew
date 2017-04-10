@@ -16,6 +16,8 @@ const GUEST_SCHEMA = {
   ceremonyReception: false,
 }
 
+const GUEST_SCHEME_CHECKBOXES = ['welcomeDinner', 'celebrationParty', 'ceremonyReception'];
+
 const HEADER_LINKS = [
   {
     title: 'HOME',
@@ -149,6 +151,7 @@ const PARTY_PEOPLE = [
 export {
   FIREBASE_CONFIG,
   GUEST_SCHEMA,
+  GUEST_SCHEME_CHECKBOXES,
   HEADER_LINKS,
   PARTY_PEOPLE
 }
