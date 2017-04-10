@@ -42,3 +42,17 @@
   flex-grow: 1;
   flex-basis: 100%;
 }
+
+.RSVP-checkboxWrapper {
+  flex-basis: 100%;
+  margin-left: 5px;
+  font-size: 14px;
+
+  &>input {
+    margin-right: 5px;
+  }
+
+  &.checkbox:hover {
+    cursor: pointer;
+  }
+}

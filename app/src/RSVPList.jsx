@@ -20,6 +20,7 @@ class RSVPList extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
   render() {
@@ -53,7 +54,8 @@ class RSVPList extends Component {
                 key={ i }
                 index={ i }
                 guest={ guest }
-                handleChange={ this.handleChange }/>
+                handleChange={ this.handleChange }
+                handleCheckboxChange={ this.handleCheckboxChange }/>
             )
           }) }
           <div className={`RSVPList-buttonContainer ${submitClass}`}>
@@ -75,12 +77,23 @@ class RSVPList extends Component {
     const name = e.target.name;
     const guestsUpdate = updateObjectInArray(guests, {
       index: guestIndex,
-      item: {
-        [name]: e.target.value
-      }
+      item: { [name]: e.target.value },
     });
 
     this.setState({ guests: guestsUpdate });
+  }
+
+  handleCheckboxChange(guestIndex, e) {
+    e.preventDefault();
+    const { guests } = this.state;
+    const name = e.target.name;
+    const status = guests[guestIndex][name];
+    const guestsUpdate = updateObjectInArray(guests, {
+      index: guestIndex,
+      item: { [name]: !status },
+    });
+
+    setTimeout( () => this.setState({ guests: guestsUpdate }), 0);
   }
 
   handleSubmit(isDataValid, e) {

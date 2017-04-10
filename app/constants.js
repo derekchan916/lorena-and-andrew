@@ -11,6 +11,9 @@ const GUEST_SCHEMA = {
   firstName: '',
   lastName: '',
   email: '',
+  welcomeDinner: false,
+  celebrationParty: false,
+  ceremonyReception: false,
 }
 
 const HEADER_LINKS = [

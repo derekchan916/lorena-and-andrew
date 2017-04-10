@@ -12,6 +12,7 @@ class RSVP extends Component {
       index,
       guest,
       handleChange,
+      handleCheckboxChange,
     } = this.props;
 
     return (
@@ -40,6 +41,31 @@ class RSVP extends Component {
             value={ guest.email }
             onChange={ (e) => handleChange(index, e) }
             placeholder='Email' />
+        </label>
+        <span className="RSVP-checkboxWrapper">Which events are you attending?</span>
+        <label className="RSVP-checkboxWrapper checkbox">
+          <input
+            name="welcomeDinner"
+            type="checkbox"
+            checked={ guest.welcomeDinner }
+            onChange={ (e) => handleCheckboxChange(index, e) } />
+          Welcome Dinner
+        </label>
+        <label className="RSVP-checkboxWrapper checkbox">
+          <input
+            name="celebrationParty"
+            type="checkbox"
+            checked={ guest.celebrationParty }
+            onChange={ (e) => handleCheckboxChange(index, e) } />
+          Celebration Party
+        </label>
+        <label className="RSVP-checkboxWrapper checkbox">
+          <input
+            name="ceremonyReception"
+            type="checkbox"
+            checked={ guest.ceremonyReception }
+            onChange={ (e) => handleCheckboxChange(index, e) } />
+          Ceremony & Reception
         </label>
       </div>
     )
