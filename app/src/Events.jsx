@@ -12,6 +12,7 @@ class Events extends Component {
       <div className="Events-wrapper content-wrapper" id="events">
         <div className="content-container">
           <h1>Events</h1>
+          <h3 className="Events-subtitle">Dress Code: Cocktail Attire</h3>
           <div className="Events-content">
             { this.renderEventList() }
             { this.renderEventMap() }
@@ -28,7 +29,7 @@ class Events extends Component {
           <h2>1. WELCOME DINNER</h2>
           <div className="Events-subDetails">
             <span>TBD, Saturday, July 8th, 2017</span>
-            <span>金廷宴 Golden Palace Banquet Hall Golden</span>
+            <span>金廷宴 Golden Palace Banquet Hall</span>
             <span>First Markham Place, 3225 Hwy 7 #1, Markham, ON L3R 3P3</span>
           </div>
         </ul>

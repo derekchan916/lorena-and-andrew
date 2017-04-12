@@ -32,7 +32,7 @@ class RSVPList extends Component {
       return (
         <div className="content-wrapper" id="rsvp">
           <div className="content-container">
-            <h1>RSVP</h1>
+            <h1>RSVP & GIFTS</h1>
             <div className="RSVPList-successMessage">
               <img
                 className="RSVPList-successImage"
@@ -48,6 +48,7 @@ class RSVPList extends Component {
       <div className="content-wrapper" id="rsvp">
         <div className="content-container">
           <h1>RSVP</h1>
+          <h3 className="RSVPList-subtitle">Please RSVP before May 28th.</h3>
           { this.state.guests.map((guest, i) => {
             return (
               <RSVP
@@ -66,9 +67,17 @@ class RSVPList extends Component {
             </button>
           </div>
           <span className="RSVPList-errors">{ errors }</span>
+          { this.renderGifts() }
         </div>
       </div>
     )
+  }
+
+  renderGifts() {
+    return ([
+      <h1>Gifts</h1>,
+      <h3 className="RSVPList-subtitle">What we want most for our wedding is to have all of our friends and family together for a good time. More than anything, your well wishes and friendship is enough and gifts are not necessary. There is no registry, as we are in preparation for another big move in our life, moving to Hong Kong. If you would still like to gift us, envelopes and cards would be greatly appreciated.</h3>
+    ]);
   }
 
   handleChange(guestIndex, e) {
