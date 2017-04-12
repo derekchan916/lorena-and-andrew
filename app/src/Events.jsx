@@ -31,6 +31,7 @@ class Events extends Component {
             <span>TBD, Saturday, July 8th, 2017</span>
             <span>金廷宴 Golden Palace Banquet Hall</span>
             <span>First Markham Place, 3225 Hwy 7 #1, Markham, ON L3R 3P3</span>
+            <span className="bold">Transportation to the celebration party will be provided.</span>
           </div>
         </ul>
 

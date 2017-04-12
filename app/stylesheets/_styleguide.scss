@@ -22,6 +22,10 @@
     margin-bottom: $gutter-small;
   }
 
+  .bold {
+    font-weight: bold;
+  }
+
 	a:link {color: #007DC3; text-decoration: underline; }
 	a:active {color: #0000ff; text-decoration: underline; }
 	a:visited {color: #008000; text-decoration: underline; }
