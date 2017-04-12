@@ -68,7 +68,8 @@ const PARTY_PEOPLE = [
     name: 'KEVIN WONG',
     position: 'Best Man, Brother of the Groom',
     description: [
-      "Kevin currently works at a health start-up in Toronto."
+      "If you were ever curious as to what a more stylish, fashionable, hype-beast version of Andrew would be, look no further than his brother Kevin. Kevin had to endure Andrew's years of bad jokes, musical compositions making fun of his love life, and the infamous 'Vegeta body roll' (ask Kevin what it means sometime).",
+      "Through it all, Andrew couldn't be more lucky to have Kevin as a brother and more importantly, best friend.",
     ],
     image: 'app/images/kevin.jpeg'
   },
@@ -94,7 +95,9 @@ const PARTY_PEOPLE = [
     name: 'CHRIS JANG',
     position: 'Groomsman',
     description: [
-      "Chris currently works at Shell."
+      "Andrew and Chris have built their friendship entirely based on jokes and pranks. Laughs will always be had recalling Chris's ELPE ordeal, the Chem eng underground folder, and interpretations of the definition of a 'hemisphere' in Calculus. There was also that time when Chris broke into Andrew's room and moved out all his stuff...which led to way too many copy cat pranks over the years.",
+      "Overall, Andrew's happy to have Chris as a good friend who always provides a different perspective. ㅋㅋㅋㅋㅋㅋㅋ.",
+      "Chris currently works at Shell.",
     ],
     image: 'app/images/Chris.JPG'
   },
@@ -102,6 +105,7 @@ const PARTY_PEOPLE = [
     name: 'PHILIP LA',
     position: 'Groomsman',
     description: [
+      "Andrew and Phil met early on in university and instantly became friends. So much so, that they were roommates for 5 years, co-workers for 2, and rivals for many more. Andrew has come to appreciate Phil's level-headed advice when it comes to life. For those that are curious, Phil was the one who introduced Andrew to the phrase 'beast' -- something that Andrew probably uses too often in his everyday vocabulary.",
       "Philip is currently a manager at Figure1 in Toronto."
     ],
     image: 'app/images/Phillip.JPG'
