@@ -48,7 +48,6 @@ class RSVPList extends Component {
       <div className="content-wrapper" id="rsvp">
         <div className="content-container">
           <h1>RSVP</h1>
-          <h3 className="RSVPList-subtitle">Please RSVP before May 28th.</h3>
           { this.state.guests.map((guest, i) => {
             return (
               <RSVP
